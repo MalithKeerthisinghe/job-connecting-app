@@ -31,14 +31,14 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 // Title & Subtitle
                 Padding(
-                  padding: const EdgeInsets.only(top: 150.0, left: 30.0),
+                  padding: const EdgeInsets.only(top: 160.0, left: 30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
                         "Welcome to\nUltimate Choice",
                         style: TextStyle(
-                          fontSize: 32,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
                         ),
@@ -46,7 +46,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       const SizedBox(height: 8),
                       Text(
                         "Where Compassion meets Quality",
-                        style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                        style: TextStyle(fontSize: 12, color: Colors.grey[700]),
                       ),
                     ],
                   ),
@@ -54,7 +54,107 @@ class _SignupScreenState extends State<SignupScreen> {
               ],
             ),
 
-            const SizedBox(height: 60),
+            const SizedBox(height: 40),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Role heading
+                  Center(
+                    child: Text(
+                      'Choose your role',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.grey[700],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+
+                  // Talent & Partner buttons in same row
+                  Row(
+                    children: [
+                      // Talent button
+                      Expanded(
+                        child: SizedBox(
+                          height: 50,
+                          child: InkWell(
+                            onTap: () {
+                              // TODO: handle Talent role
+                            },
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  colors: [
+                                    Color(0xFF005FC6),
+                                    Color(0xFF002E60),
+                                  ],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              alignment: Alignment.center,
+                              child: const Text(
+                                'Talent',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(width: 15),
+
+                      // Partner button
+                      Expanded(
+                        child: SizedBox(
+                          height: 50,
+                          child: InkWell(
+                            onTap: () {
+                              // TODO: handle Partner role
+                            },
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  colors: [
+                                    Color(0xFF005FC6),
+                                    Color(0xFF002E60),
+                                  ],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              alignment: Alignment.center,
+                              child: const Text(
+                                'Partner',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 280),
 
             // Gradient NEXT Button
             Padding(
@@ -91,7 +191,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
 
             // "Already have an account? Login"
             Row(
